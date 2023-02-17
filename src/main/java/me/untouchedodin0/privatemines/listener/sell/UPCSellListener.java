@@ -24,9 +24,8 @@
 
 package me.untouchedodin0.privatemines.listener.sell;
 
-import dev.drawethree.ultraprisoncore.autosell.api.events.UltraPrisonAutoSellEvent;
-import dev.drawethree.ultraprisoncore.autosell.api.events.UltraPrisonSellAllEvent;
-import dev.drawethree.ultraprisoncore.autosell.model.AutoSellItemStack;
+import dev.drawethree.xprison.autosell.api.events.XPrisonSellAllEvent;
+import dev.drawethree.xprison.autosell.model.AutoSellItemStack;
 import me.untouchedodin0.kotlin.mine.data.MineData;
 import me.untouchedodin0.kotlin.mine.storage.MineStorage;
 import me.untouchedodin0.privatemines.PrivateMines;
@@ -48,9 +47,8 @@ public class UPCSellListener implements Listener {
     MineStorage mineStorage = privateMines.getMineStorage();
     MineWorldManager mineWorldManager = privateMines.getMineWorldManager();
     double taxForOwner = 0;
-
     @EventHandler
-    public void onSellAll(UltraPrisonSellAllEvent sellAllEvent) {
+    public void onSellAll(XPrisonSellAllEvent sellAllEvent) {
         Player player = sellAllEvent.getPlayer();
         Location playerLocation = player.getLocation();
         World playerWorld = player.getWorld();
@@ -90,7 +88,7 @@ public class UPCSellListener implements Listener {
     }
 
     @EventHandler
-    public void onAutoSell(UltraPrisonAutoSellEvent autoSellEvent) {
+    public void onAutoSell(XPrisonSellAllEvent autoSellEvent) {
         Player player = autoSellEvent.getPlayer();
         Location playerLocation = player.getLocation();
         World playerWorld = player.getWorld();

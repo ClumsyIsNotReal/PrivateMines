@@ -568,15 +568,15 @@ public class Mine {
 
   public void ban(Player player) {
     if (mineData.getBannedPlayers().contains(player.getUniqueId())) {
+      player.sendMessage(ChatColor.RED + "This player has already been banned from this mine!");
       return;
     }
     Player owner = Bukkit.getPlayer(mineData.getMineOwner());
     if (player.equals(owner)) {
+      player.sendMessage(ChatColor.RED + "You can't ban yourself!");
       return;
     }
-    player.sendMessage(
-        ChatColor.RED + "You've been banned from " + Objects.requireNonNull(owner).getName()
-            + "'s mine!");
+    player.sendMessage(ChatColor.RED + "You've been banned from " + Objects.requireNonNull(owner).getName() + "'s mine!");
     mineData.getBannedPlayers().add(player.getUniqueId());
     setMineData(mineData);
     saveMineData(Objects.requireNonNull(owner), mineData);
@@ -584,9 +584,7 @@ public class Mine {
 
   public void unban(Player player) {
     Player owner = Bukkit.getPlayer(mineData.getMineOwner());
-    player.sendMessage(
-        ChatColor.RED + "You've been unbanned from " + Objects.requireNonNull(owner).getName()
-            + "'s mine!");
+    player.sendMessage(ChatColor.RED + "You've been unbanned from " + Objects.requireNonNull(owner).getName() + "'s mine!");
     mineData.getBannedPlayers().remove(player.getUniqueId());
     setMineData(mineData);
     saveMineData(Objects.requireNonNull(owner), mineData);

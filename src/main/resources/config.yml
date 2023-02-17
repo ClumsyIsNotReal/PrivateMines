@@ -1,3 +1,5 @@
+# Prefixes
+Prefix: '&aPrivateMines &8» '
 # The different Materials to look for within the mine structure.
 spawnPoint: SPONGE
 mineCorner: POWERED_RAIL

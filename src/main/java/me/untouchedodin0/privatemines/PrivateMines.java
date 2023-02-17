@@ -24,7 +24,7 @@ package me.untouchedodin0.privatemines;
 import co.aikar.commands.PaperCommandManager;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.jeff_media.updatechecker.UpdateCheckSource;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -608,8 +608,8 @@ public class PrivateMines extends JavaPlugin {
   }
 
   public void registerSellListener() {
-    if (Bukkit.getPluginManager().isPluginEnabled("UltraPrisonCore")) {
-      getLogger().info("Registering Ultra Prison Core as the sell listener...");
+    if (Bukkit.getPluginManager().isPluginEnabled("X-Prison")) {
+      getLogger().info("Registering X-Prison as the sell listener...");
       getServer().getPluginManager().registerEvents(new UPCSellListener(), this);
       return;
     } else if (Bukkit.getPluginManager().isPluginEnabled("AutoSell")) {

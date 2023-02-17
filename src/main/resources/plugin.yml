@@ -1,6 +1,6 @@
 name: PrivateMines
 main: me.untouchedodin0.privatemines.PrivateMines
-version: 5.3.5
+version: 5.3.6
 api-version: 1.13
 authors:
   - UntouchedOdin0
@@ -9,6 +9,7 @@ authors:
   - DrZoddiak
   - ComputerNerd100
   - bbSnavy
+  - ClumsyIsNotReal
 
 depend:
   - FastAsyncWorldEdit
